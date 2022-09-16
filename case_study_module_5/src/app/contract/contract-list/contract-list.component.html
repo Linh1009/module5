@@ -1,0 +1,36 @@
+<div class="grid wide services__container" style="background-color: white">
+  <div class="row justify-content-center">
+    <h2>Contract List</h2>
+  </div>
+  <div>
+    <a class="ml-5 btn badge-light" style="background-color: #DAE5D0" [routerLink]="['/contracts/create']">Create new contract</a>
+  </div>
+  <div class="mr-3 ml-3 mt-3">
+    <table id="tableContract" class="table table-hover table-fixed">
+      <thead style="background-color: #FEFBE7">
+      <tr>
+        <th>ID</th>
+        <th>Ngày bắt đầu</th>
+        <th>Ngày kết thúc</th>
+        <th>Tiền đặt cọc</th>
+        <th>Mã khách hàng</th>
+        <th>Tên dịch vụ</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let contract of contractList | paginate: {itemsPerPage: 1, currentPage: p}">
+        <th scope="row">{{contract.id}}</th>
+        <td>{{contract.startDay | date: 'dd/MM/yyyy'}}</td>
+        <td>{{contract.endDay | date: 'dd/MM/yyyy'}}</td>
+        <td>{{contract.deposit}}</td>
+        <td>{{contract.customer.name}}</td>
+        <td>{{contract.facility.name}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="wide grid pagination__container">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>
+

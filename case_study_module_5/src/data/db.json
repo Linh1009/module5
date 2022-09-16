@@ -1,0 +1,264 @@
+{
+  "facilities": [
+    {
+      "id": 2,
+      "name": "Villa Hoi An",
+      "area": "300",
+      "cost": "200",
+      "maxPeople": "2",
+      "rentType": {
+        "id": "4"
+      },
+      "serviceType": {
+        "id": 1,
+        "name": "Villa"
+      },
+      "standardRoom": "Vip",
+      "description": "None",
+      "poolArea": "300",
+      "numberOfFloor": "2",
+      "image": "Villa"
+    },
+    {
+      "id": 3,
+      "name": "Villa Quang Nam",
+      "area": 100,
+      "cost": 400,
+      "maxPeople": 2,
+      "rentType": {
+        "id": 1
+      },
+      "serviceType": {
+        "id": 2,
+        "name": "House"
+      },
+      "standardRoom": "Vip",
+      "description": "None",
+      "poolArea": 0,
+      "numberOfFloor": 0,
+      "image": "House"
+    },
+    {
+      "name": "Home Da nag",
+      "area": "3400",
+      "cost": "3214",
+      "maxPeople": "1",
+      "rentType": {
+        "id": 1
+      },
+      "serviceType": {
+        "id": 2,
+        "name": "House"
+      },
+      "standardRoom": "Vip",
+      "description": "Đẹp",
+      "poolArea": "2323",
+      "numberOfFloor": "1",
+      "image": "ggjj",
+      "id": 4
+    }
+  ],
+  "customers": [
+    {
+      "code": "KH4567",
+      "type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "Linh",
+      "birthday": "2022-09-03",
+      "gender": "Nữ",
+      "idCard": "1243254235",
+      "phone": "2314125415",
+      "email": "linhphan02122002@gmail.com",
+      "address": "Phu Yen",
+      "id": 4
+    },
+    {
+      "id": 6,
+      "code": "KH0000",
+      "type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "Linh",
+      "birthday": "2022-09-17",
+      "gender": "Nữ",
+      "idCard": "5682393222",
+      "phone": "028829131",
+      "email": "linhphan02122002@gmail.com",
+      "address": "Da  Nang"
+    }
+  ],
+  "contracts": [
+    {
+      "startDay": "2022-09-03",
+      "endDay": "2022-09-08",
+      "deposit": "500000",
+      "total": "200",
+      "customer": {
+        "id": 3,
+        "code": "KH003",
+        "type": {
+          "id": 1,
+          "name": "Diamond"
+        },
+        "name": "Nguyen Van C",
+        "birthday": "1992-07-21",
+        "gender": "Nam",
+        "idCard": "4583639263",
+        "phone": "0332528533",
+        "email": "c@gmail.com",
+        "address": "Da Nang"
+      },
+      "facility": {
+        "id": 1,
+        "name": "Villa Đà nẵng",
+        "area": 100,
+        "cost": 700000,
+        "maxPeople": 3,
+        "rentType": {
+          "id": 2
+        },
+        "serviceType": {
+          "id": 1,
+          "name": "Villa"
+        },
+        "standardRoom": "Vip",
+        "description": "None",
+        "poolArea": 0,
+        "numberOfFloor": 0,
+        "image": "abc"
+      },
+      "id": 1
+    },
+    {
+      "startDay": "2022-09-08",
+      "endDay": "2022-09-11",
+      "deposit": "133433",
+      "total": "235425",
+      "customer": {
+        "id": 3,
+        "code": "KH003",
+        "type": {
+          "id": 1,
+          "name": "Diamond"
+        },
+        "name": "Nguyen Van C",
+        "birthday": "1992-07-21",
+        "gender": "Nam",
+        "idCard": "4583639263",
+        "phone": "0332528533",
+        "email": "c@gmail.com",
+        "address": "Da Nang"
+      },
+      "facility": {
+        "id": 2,
+        "name": "Villa Hoi An",
+        "area": "300",
+        "cost": "200",
+        "maxPeople": "2",
+        "rentType": {
+          "id": "4"
+        },
+        "serviceType": {
+          "id": 1,
+          "name": "Villa"
+        },
+        "standardRoom": "Vip",
+        "description": "None",
+        "poolArea": "300",
+        "numberOfFloor": "2",
+        "image": "Villa"
+      },
+      "id": 2
+    },
+    {
+      "startDay": "2022-09-17",
+      "endDay": "2022-09-03",
+      "deposit": "566777",
+      "total": "45657",
+      "customer": {
+        "id": 3,
+        "code": "KH0014",
+        "type": {
+          "id": 1,
+          "name": "Diamond"
+        },
+        "name": "Nguyen Van C",
+        "birthday": "1992-07-21",
+        "gender": "Nam",
+        "idCard": "4583639263",
+        "phone": "0332528533",
+        "email": "c@gmail.com",
+        "address": "Da Nang"
+      },
+      "facility": {
+        "id": 1,
+        "name": "Villa Đà nẵng",
+        "area": "255",
+        "cost": "100",
+        "maxPeople": 3,
+        "rentType": {
+          "id": 2
+        },
+        "serviceType": {
+          "id": 1,
+          "name": "Villa"
+        },
+        "standardRoom": "Vip",
+        "description": "None",
+        "poolArea": 100,
+        "numberOfFloor": 1,
+        "image": "Villa"
+      },
+      "id": 3
+    }
+  ],
+  "rentTypes": [
+    {
+      "id": 1,
+      "name": "Ngày"
+    },
+    {
+      "id": 2,
+      "name": "Tháng"
+    },
+    {
+      "id": 3,
+      "name": "Năm"
+    },
+    {
+      "id": 4,
+      "name": "Giờ"
+    }
+  ],
+  "typeServices": [
+    {
+      "id": 1,
+      "name": "Villa"
+    },
+    {
+      "id": 2,
+      "name": "House"
+    },
+    {
+      "id": 3,
+      "name": "Room"
+    }
+  ],
+  "customerTypes": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "Member"
+    }
+  ]
+}

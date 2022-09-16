@@ -1,0 +1,77 @@
+
+<div class="grid wide services__container" style="background-color: white">
+  <div class="row justify-content-center">
+    <h2>Service List</h2>
+  </div>
+  <div>
+    <a class="ml-5 btn btn-outline-dark" style="background-color: #DAE5D0" [routerLink]="['/facilities/create']">Create new service</a>
+  </div>
+  <div class="grid wide services__container" style="background-color: #FEFBE7">
+    <div class="row justify-content-center">
+      <h2>Customer List</h2>
+    </div>
+    <div class="mr-3 ml-3 mt-3">
+      <table class="table table-hover table-responsive">
+        <thead style="background-color: #FEFBE7">
+        <tr>
+          <th>Tên dịch vụ</th>
+          <th>Diện tích</th>
+          <th>Tiền đặt cọc</th>
+          <th >Số người tối đa</th>
+          <th>Kiểu thuê</th>
+          <th>Kiểu dịch vụ</th>
+          <th>Tiêu chuẩn phòng</th>
+          <th>Mô tả khác</th>
+          <th>Diện tích hồ bơi</th>
+          <th>Số tầng</th>
+          <th>Hình ảnh</th>
+          <th>#</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let facilities of facilities | paginate: {itemsPerPage: 2, currentPage: p}">
+          <td>{{facilities.name}}</td>
+          <td>{{facilities.area}}</td>
+          <td>{{facilities.cost}}</td>
+          <td>{{facilities.maxPeople}}</td>
+          <td>{{facilities.rentType.name}}</td>
+          <td>{{facilities.serviceType.name}}</td>
+          <td>{{facilities.standardRoom}}</td>
+          <td>{{facilities.description}}</td>
+          <td>{{facilities.poolArea}}</td>
+          <td>{{facilities.numberOfFloor}}</td>
+          <td>{{facilities.image}}</td>
+          <button type="button" class="btn my-2 my-sm-0 btn-outline-dark"
+                  style=" background-color: #e66557; color: #15133C"
+                  data-toggle="modal" data-target="#exampleModal" (click)="getFacilityDelete(facilities)">
+            Delete
+          </button>
+
+          <td>
+          </td></tr>
+        </tbody></table></div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Delete Service</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Bạn có chắc chắn muốn xóa dịch vụ: <span style="color: #4f3fff">{{facilityDelete.name}}</span> này không ?
+          </div>
+          <div class="ml-3">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" style="background-color: #e66557; color: #15133C" data-dismiss="modal" (click)="deleteFacility(facilityDelete.id)">Delete</button>
+            <button type="button" class="btn btn-outline-dark" style="background-color: #c5dfe8; color: #15133C" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
